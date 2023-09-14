@@ -13,6 +13,19 @@ with open(election_csv) as csvfile:
         pollResult[row[2]]=pollResult.get(row[2],0)+1
 
     #print(list(pollResult))
-    print(list(pollResult.items()))
-        
+    #print(list(pollResult.items()))
+    #print(type(pollResult.values()))
+    os.system("cls") # Windows     
+    totalCount=0
+    print('\n'.join(["Election Results","","------------------",""]))
+    for (k,v) in pollResult.items():
+        totalCount=totalCount+int(v)
+    print(f"Total Votes:   {totalCount}") 
+    print('\n'.join(["","------------------",""]))   
+    for (k,v) in pollResult.items():
+        percent=int(v)/totalCount
+        print(k +": "+"{:.3%}".format(percent)  +f"  ({v})")
+    print('\n'.join(["","------------------",""]))
+    print("winner:   ")
+    print()
 
