@@ -36,3 +36,19 @@ with open(budget_csv_path) as csvfile:
     print("Average Change:  "+"${:.2f}".format(aveChange)+"\n"+"\n")        # Diplays the average change with some spacing
     print(f"Greatest Increase in Profits: {maxVal[0]}"  +"  (${:.0f}".format(maxVal[2])+")\n")     
     print(f"Greatest Decrease in Profits: {minVal[0]}" +"   (${:.0f}".format(minVal[2])+")\n"+"\n"+"\n")    
+
+
+#__________________________________________________________________  Output results to a text file in a subdirectory named "analysis"
+
+output_path = os.path.join("analysis","financial_results.txt")       # Identifies the path to the \analysis\financial_results.txt file to be created
+
+with open(output_path, "w", newline='') as datafile:                # Creates the file 
+    datafile.write('\n'.join(["",""]))                                               # Skips two lines
+    datafile.write('\n'.join(["Financial Analysis","","------------------","\n"]))     # Adds spacing and separation line
+    datafile.write(f"Total Months:   {months}"+"\n"+"\n")                                 # Prints the total month count
+    datafile.write("Total :  "+"${:.0f}".format(netTotal)+"\n"+"\n")                      # Prints the net total amount of Profit/Losses
+                                                                            # needs to adjust the format since the type is FLOAT and not INT
+    datafile.write("Average Change:  "+"${:.2f}".format(aveChange)+"\n"+"\n")        # Diplays the average change with some spacing
+    datafile.write(f"Greatest Increase in Profits: {maxVal[0]}"  +"  (${:.0f}".format(maxVal[2])+")\n"+"\n")     
+    datafile.write(f"Greatest Decrease in Profits: {minVal[0]}" +"   (${:.0f}".format(minVal[2])+")\n"+"\n"+"\n")  
+    datafile.close()                                                # Close the file     
