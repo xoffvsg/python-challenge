@@ -27,7 +27,7 @@ with open(budget_csv_path) as csvfile:
     maxVal=max(budget, key=lambda x: x[2])      #https://www.geeksforgeeks.org/python-find-the-sublist-with-maximum-value-in-given-nested-list/
     minVal=min(budget, key=lambda x: x[2])                          # Finds the max/min in a nested list. Returns the full list for the corresponding index
 
-#_______________________________________________________________    Display the out put to the terminal
+#_______________________________________________________________    Display the output to the terminal
     print('\n'.join(["",""]))                                               # Skips two lines
     print('\n'.join(["Financial Analysis","","------------------",""]))     # Adds spacing and separation line
     print(f"Total Months:   {months}"+"\n")                                 # Prints the total month count

@@ -17,7 +17,6 @@ with open(election_csv_path) as csvfile:
 
 #_________________________________________________________________  Output results to the terminal
 
-    #os.system("cls")                                                      # Windows  <--  WILL NEED TO REMOVE BEFORE SUBMITTING if grader is on a MAC   
     print('\n'.join(["",""]))                                              # Skips two lines
     totalCount=0                                                           # Initializes to counter
     print('\n'.join(["Election Results","","------------------",""]))      # Adds spacing and separation line
