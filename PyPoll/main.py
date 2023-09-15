@@ -53,6 +53,6 @@ with open(output_path, "w", newline='') as datafile:                # Creates th
     datafile.write('\n'.join(["------------------","\n"]))                             # Adds spacing and separation line
     datafile.write(f"Winner:   {max(pollResult.keys(), key=pollResult.get)}")    # Diplays the name of the winner
     datafile.write('\n'.join(["\n","------------------","\n","\n","\n"]))              # Adds spacing and separation line
-    datafile.close()                                                # Close the file
+
 
 

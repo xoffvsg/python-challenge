@@ -51,4 +51,4 @@ with open(output_path, "w", newline='') as datafile:                # Creates th
     datafile.write("Average Change:  "+"${:.2f}".format(aveChange)+"\n"+"\n")        # Diplays the average change with some spacing
     datafile.write(f"Greatest Increase in Profits: {maxVal[0]}"  +"  (${:.0f}".format(maxVal[2])+")\n"+"\n")     
     datafile.write(f"Greatest Decrease in Profits: {minVal[0]}" +"   (${:.0f}".format(minVal[2])+")\n"+"\n"+"\n")  
-    datafile.close()                                                # Close the file     
+    
